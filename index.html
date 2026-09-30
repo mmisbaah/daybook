@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Daybook — appointment scheduling built for therapy practices. Standing cadence, insurance verification, intake forms and waitlist filling, not a generic booking link.">
+<meta name="theme-color" content="#12110D">
+<title>Daybook — scheduling for therapy practices</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=1">
+</head>
+<body>
+
+<main class="stage">
+
+  <header class="stage-head">
+    <div class="brand">
+      <div class="stage-mark">DB</div>
+      <div class="brand-t">
+        <b>Daybook</b>
+        <em>Scheduling for therapy practices — standing cadence, insurance, intake and a waitlist that fills cancellations. A vertical, not another booking link.</em>
+      </div>
+    </div>
+    <div class="stage-links">
+      <span class="stage-tag">Wed 30 Sep · 12:38 PM PT</span>
+      <span class="stage-tag stage-tag--accent">Tap the open 1:00 slot →</span>
+    </div>
+  </header>
+
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="phone-screen">
+
+        <div class="statusbar">
+          <span class="sb-time">12:38</span>
+          <span class="sb-notch" aria-hidden="true"></span>
+          <span class="sb-icons" aria-hidden="true">
+            <svg viewBox="0 0 20 12" width="17" height="11"><rect x="0" y="7.5" width="3" height="4.5" rx="1"/><rect x="4.6" y="5.2" width="3" height="6.8" rx="1"/><rect x="9.2" y="2.6" width="3" height="9.4" rx="1"/><rect x="13.8" y="0" width="3" height="12" rx="1" opacity=".35"/></svg>
+            <svg viewBox="0 0 16 12" width="15" height="11"><path d="M8 10.4 6.1 8.5a2.7 2.7 0 0 1 3.8 0zM8 6.6a5.3 5.3 0 0 0-3.8 1.6L2.8 6.8a7.4 7.4 0 0 1 10.4 0l-1.4 1.4A5.3 5.3 0 0 0 8 6.6M8 2.8a9.1 9.1 0 0 0-6.5 2.7L.1 4.1a11.2 11.2 0 0 1 15.8 0l-1.4 1.4A9.1 9.1 0 0 0 8 2.8"/></svg>
+            <svg viewBox="0 0 27 12" width="25" height="11"><rect x="0.5" y="0.5" width="22" height="11" rx="3.4" fill="none" stroke="currentColor" stroke-opacity=".4"/><rect x="2.2" y="2.2" width="16.6" height="7.6" rx="2.1"/><path d="M24.4 4.2v3.6a2 2 0 0 0 0-3.6" opacity=".45"/></svg>
+          </span>
+        </div>
+
+        <div class="viewport" id="viewport" aria-live="polite"></div>
+
+        <nav class="tabbar" id="tabbar" aria-label="Main">
+          <button class="tab" data-tab="today" type="button">
+            <span class="tab-ic"></span><span class="tab-lb">Daybook</span><span class="tab-dot"></span>
+          </button>
+          <button class="tab" data-tab="clients" type="button">
+            <span class="tab-ic"></span><span class="tab-lb">Clients</span><span class="tab-dot"></span>
+          </button>
+          <button class="tab" data-tab="requests" type="button">
+            <span class="tab-ic"></span><span class="tab-lb">Requests</span><span class="tab-badge">2</span>
+          </button>
+          <button class="tab" data-tab="booking" type="button">
+            <span class="tab-ic"></span><span class="tab-lb">Booking page</span><span class="tab-dot"></span>
+          </button>
+        </nav>
+
+        <div class="sheet-layer" id="sheetLayer" hidden>
+          <div class="scrim" data-act="close-sheet"></div>
+          <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+        </div>
+
+        <div class="toast" id="toast" hidden></div>
+        <div class="home-indicator" aria-hidden="true"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="stage-foot">
+    <span class="foot-hint"><b>1</b> Fill the open slot from the waitlist</span>
+    <span class="foot-hint"><b>2</b> Open a session for the clinical context</span>
+    <span class="foot-hint"><b>3</b> Book as a client on the Booking page</span>
+  </footer>
+
+</main>
+
+<script src="js/ui.js?v=1"></script>
+<script src="js/data.js?v=1"></script>
+<script src="js/screens-schedule.js?v=1"></script>
+<script src="js/screens-people.js?v=1"></script>
+<script src="js/screens-booking.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
