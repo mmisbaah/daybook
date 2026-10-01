@@ -67,6 +67,7 @@ var S = {
     var nb = el.querySelector('.scr-body');
     if (nb) nb.scrollTop = y;
   }
+  window.DaybookRefresh = function () { renderAll('tab'); };
 
   function push(id, params) {
     var st = S.stacks[S.tab];
