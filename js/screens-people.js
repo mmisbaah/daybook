@@ -47,7 +47,7 @@
         '<div class="sub">' + n.caseload + ' on the books · ' + n.waitlist + ' waitlisted</div></div>' +
         '<div class="nav-actions">' +
         '<button class="icon-btn" data-act="toast" data-msg="Search by name, carrier or slot">' + I('search', 'ic-sm') + '</button>' +
-        '<button class="icon-btn" data-act="toast" data-msg="New client: sends intake + consent automatically">' + I('plus', 'ic-sm') + '</button>' +
+        '<button class="icon-btn" data-db="new-client" aria-label="Add client">' + I('plus', 'ic-sm') + '</button>' +
         '</div></div>' +
       '<div class="scr-body">' +
         '<div class="filters">' + filters + '</div>' +

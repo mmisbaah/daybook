@@ -475,11 +475,24 @@ var DB = (function () {
     ]
   };
 
+  try {
+    var saved = JSON.parse(localStorage.getItem('daybook-data-v2'));
+    if (saved) {
+      if (Array.isArray(saved.clients)) clients = saved.clients;
+      if (Array.isArray(saved.timeline)) timeline = saved.timeline;
+      if (Array.isArray(saved.requests)) requests = saved.requests;
+    }
+  } catch (e) { /* Start with examples when browser storage is unavailable. */ }
+
   return {
     practice: practice, week: week, clients: clients, timeline: timeline,
     requests: requests, booking: booking,
+    save: function () {
+      try { localStorage.setItem('daybook-data-v2', JSON.stringify({ clients: this.clients, timeline: this.timeline, requests: this.requests })); }
+      catch (e) { /* The app remains usable for this session. */ }
+    },
     get: function (id) {
-      for (var i = 0; i < clients.length; i++) if (clients[i].id === id) return clients[i];
+      for (var i = 0; i < this.clients.length; i++) if (this.clients[i].id === id) return this.clients[i];
       return null;
     }
   };
